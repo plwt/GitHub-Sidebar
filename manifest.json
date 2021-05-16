@@ -1,0 +1,52 @@
+{
+
+  "manifest_version": 2,
+  "name": "GitHub Sidebar",
+  "version": "0.1",
+  "description": "Displays a sidebar with GitHub.",
+  "author": "Seburo",
+  "applications": {
+    "gecko": {
+      "strict_min_version": "73.0"
+    }
+  },
+
+    "background": {
+    "scripts": ["background.js"]
+  },
+
+  "icons": {
+    "192": "icons/icon32.png"
+  },
+
+  "sidebar_action": {
+    "default_icon": {
+      "192": "icons/icon32.png"
+    },
+    "default_title" : "GitHub",
+    "default_panel": "index.html"
+  },
+
+  "browser_action": {
+  "default_icon": {
+      "192": "icons/icon32.png"
+    },
+   "theme_icons": [{
+                "light": "/icons/icondark32.png",
+                "dark": "/icons/iconlight32.png",
+                "size": 192
+                
+            }]},
+ 
+
+  "permissions": ["storage", "tabs"],
+
+  "commands": {
+    "_execute_sidebar_action": {
+      "suggested_key": {
+        "default": "Ctrl+Alt+F"
+      }
+    }
+  }
+
+}
